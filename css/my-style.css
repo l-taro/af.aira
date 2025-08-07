@@ -1,0 +1,12 @@
+.test {
+  background: green;
+}
+.test p {
+  background: yellow;
+  color: #000000;
+}
+
+body {
+  background: red;
+  color: #ffffff;
+}/*# sourceMappingURL=my-style.css.map */
