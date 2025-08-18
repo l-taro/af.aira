@@ -11,4 +11,12 @@ $(document).ready(function() {
         $('.cb__content').toggleClass('cart');
         $(this).toggleClass('active');
     }); 
+
+    $(document).on("click", "#search_close", function() {        
+        //$('#search_results').toggleClass('open');
+        $('#search_results').slideToggle('fast');
+        $(this).toggleClass('open');
+    }); 
+
+    
 });

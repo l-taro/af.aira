@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link href="my-style.css" rel="stylesheet" type="text/css" />
+    <link href="css//my-style.css" rel="stylesheet" type="text/css" />
+    <link href="css//my-style_v2.css" rel="stylesheet" type="text/css" />
     <script type='text/javascript' src='js/jquery-3.7.1.min.js'></script> 
     <script type='text/javascript' src='js/script.js'></script>
 
@@ -31,13 +32,12 @@
                     <div class="cb__aira_wrapper">
                         <div class="cb__aira">
                             <div class="cb__aira_inner">
-                                <img src="images/aira_10.jpg">
-                                <img src="images/aira_20.jpg">
-                                <p>Здравствуйте!<br />Я - Ваш виртуальный ассистент Айра.<br /><br />Напишите, какая деталь Вам нужна и&nbsp;я&nbsp;с&nbsp;удовольствием помогу Вам!</p>
+                                <img src="images/aira.webp">
+                                <p>Здравствуйте!<br />Я - Ваш виртуальный ассистент&nbsp;Айра.<br /><br />Напишите, какая деталь Вам&nbsp;нужна и&nbsp;я&nbsp;с&nbsp;удовольствием помогу Вам!</p>
                             </div>
                         </div>
                         <div class="cb__manager"> 
-                            <p>AI-консультант по автозапчастям </p>
+                            <p><span>Aira</span>AI-консультант по автозапчастям </p>
                             <div class="cb__status status_online">                    
                                 <span class="cb__status_blink"></span>
                                 <em class="cb__status_on">Онлайн</em>
@@ -71,10 +71,13 @@ fill="#ffffff" stroke="none">
 176 15 322 132 375 302 28 88 19 211 -21 297 -44 93 -109 160 -201 205 -68 34
 -83 38 -171 40 -77 3 -107 -1 -151 -17z"/>
 </g>
-</svg> <p>Ваши покупки</p><span>0</span>
+</svg> <p class="hidden-cart">Отложено</p><p class="shown-cart">Скрыть</p><span>0</span>
                         </div>
                     </div>
-                </div>              
+                </div>  
+                <span class="header-blink hb_left"></span>   
+                <span class="header-blink hb_center"></span>
+                <span class="header-blink hb_right"></span>         
             </div>
             <div class="cb__content_wrapper">
             <div class="cb__content">
@@ -105,10 +108,10 @@ fill="#ffffff" stroke="none">
                     </div>
                 </div>
                 <div class="cb__center">
-                    <div class="cart_wrapper">
+                    <div class="cart_table">
                         <div class="cart-content">
                             <p>Ваши покупки</p>
-                            <table class="cart-table">
+                            <table class="table">
                                 <tr>
                                     <th>Наименование</th>
                                     <th>Бренд</th>
@@ -183,6 +186,98 @@ fill="#ffffff" stroke="none">
                             <div class="cb__bubble_content">
                                 <div class="cb__bubble_text">И дальше ккой-то длинный текст И дальше ккой-то длинный</div>
                                 <div class="cb__bubble_time">10.15</div>
+                            </div>
+                        </div>
+                        <div class="table_bubble cb__bubble">
+                            <div class="cb__bubble_content">
+                                <div class="table_bubble_title">Результат поиска</div>
+                                <span class="table_bubble_close open" id="search_close"><b class="tb-show">Развернуть</b><b class="tb-hide">Свернуть</b></span>
+                                <div class="table_bubble_table open" id="search_results">
+                                    <div class="table_bubble_item">
+                                        <p>Передние тормозные колодки</p>                                   
+                                        <table>
+                                            <tr>
+                                                <th>Бренд</th>
+                                                <th>Артикул</th>
+                                                <th>Цена</th>
+                                                <th>Остаток</th>
+                                                <th>Срок</th>
+                                                <th>Количество</th>
+                                                <th>В корзину</th>
+                                            </tr>
+                                            <tr>
+                                                <td>TRW</td>
+                                                <td>GDB3630</td>
+                                                <td>6500</td>
+                                                <td>2</td>
+                                                <td>3 августа</td>
+                                                <td><input type="number" min="1" value="1"></td>
+                                                <td><button>отложить</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bosch</td>  
+                                                <td>0986424951</td>
+                                                <td>7500</td>
+                                                <td>5</td>
+                                                <td>Наличие</td>
+                                                <td><input type="number" min="1" value="1"></td>
+                                                <td><button>отложить</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Brembo</td>
+                                                <td>P30122</td>
+                                                <td>8500</td>
+                                                <td>88</td>
+                                                <td>10 августа</td>
+                                                <td><input type="number" min="1" value="1"></td>
+                                                <td><button>отложить</button></td>
+                                            </tr>
+                                        </table> 
+                                        <div class="show-more">Найти больше</div> 
+                                    </div>    
+                                    <div class="table_bubble_item">
+                                        <p>Задние тормозные колодки</p>                                   
+                                        <table>
+                                            <tr>
+                                                <th>Бренд</th>
+                                                <th>Артикул</th>
+                                                <th>Цена</th>
+                                                <th>Остаток</th>
+                                                <th>Срок</th>
+                                                <th>Количество</th>
+                                                <th>В корзину</th>
+                                            </tr>
+                                            <tr>
+                                                <td>TRW</td>
+                                                <td>GDB3630</td>
+                                                <td>6500</td>
+                                                <td>2</td>
+                                                <td>3 августа</td>
+                                                <td><input type="number" min="1" value="1"></td>
+                                                <td><button>отложить</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bosch</td>  
+                                                <td>0986424951</td>
+                                                <td>7500</td>
+                                                <td>5</td>
+                                                <td>Наличие</td>
+                                                <td><input type="number" min="1" value="1"></td>
+                                                <td><button>отложить</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Brembo</td>
+                                                <td>P30122</td>
+                                                <td>8500</td>
+                                                <td>88</td>
+                                                <td>10 августа</td>
+                                                <td><input type="number" min="1" value="1"></td>
+                                                <td><button>отложить</button></td>
+                                            </tr>
+                                        </table> 
+                                        <div class="show-more">Найти больше</div> 
+                                    </div>                                
+                                </div>
                             </div>
                         </div>
                         <div class="customer_bubble cb__bubble">
