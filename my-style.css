@@ -64,9 +64,7 @@ body {
   display: none;
 }
 
-.cb {
-  /* form */
-}
+
 .cb__wrapper {
   background: #9fa3a6 url("images/chat-bg_001.webp") left center no-repeat;
 }
