@@ -5,24 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link href="my-style.css" rel="stylesheet" type="text/css" />
-    <script type='text/javascript' src='js/jquery-3.7.1.min.js'></script> 
-    <script type='text/javascript' src='js/script.js'></script>
-
-    
+    <link href="css/my-style.css" rel="stylesheet" type="text/css" />
+    <script src='js/jquery-3.7.1.min.js'></script> 
+    <script src='js/script.js'></script>    
 
 </head>
-<body>
-    <div class="wrapper">
-        <div class="header"></div>
-        <div class="content"></div>
-        <div class="footer"></div>
-    </div>
+<body>    
+        <div class="header"><div class="wrapper"></div></div>
+        <div class="content"><div class="wrapper"></div></div>
+        
+
 
     <!-- chat bot -->
-    <div class="chat-bot">   
+    <div class="chat-bot">        
         <div class="cb__wrapper">     
-            <div class="cb__header">
+            <div class="cb__header">                
                 <div class="cb__center">
                     <div class="cb__aira_wrapper">
                         <div class="cb__aira">
@@ -114,7 +111,7 @@ fill="#ffffff" stroke="none">
                                     <th>Наименование</th>
                                     <th>Бренд</th>
                                     <th>Артикул</th>
-                                    <th>Количество</th>
+                                    <th><span class="cb__desk-item">Количество</span><span class="cb__mobile-item">Кол-во</span></th>
                                     <th>Цена</th>
                                     <th>Сумма</th>
                                     <th>Наличие / Срок</th>
@@ -203,7 +200,7 @@ fill="#ffffff" stroke="none">
                                 <tr class="sum-up">
                                     <td colspan="5" class="resume">Итого:</td>
                                     <td>23500</td>
-                                    <td colspan="2" class="send-order"><div>Подтвердить</div></td>
+                                    <td colspan="2" class="send-order"><button>Подтвердить</button></td>
                                 </tr>
                             </table>
                         </div>                        
@@ -242,11 +239,10 @@ fill="#ffffff" stroke="none">
                         </div>
                         <div class="table_bubble cb__bubble">
                             <div class="cb__bubble_content">
-                                <div class="table_bubble_title">Результат поиска</div>
-                                <span class="table_bubble_close open" id="search_close"><b class="tb-show">Развернуть</b><b class="tb-hide">Свернуть</b></span>
-                                <div class="table_bubble_table open" id="search_results">
-                                    <div class="table_bubble_item">
-                                        <p>Передние тормозные колодки</p>                                   
+                                <div class="table_bubble_title">Передние тормозные колодки</div>
+                                <span class="table_bubble_close open search_close"><b class="tb-show">Развернуть</b><b class="tb-hide">Свернуть</b></span>
+                                <div class="table_bubble_table open search_results">
+                                    <div class="table_bubble_item">              
                                         <table>
                                             <tr>
                                                 <th>Бренд</th>
@@ -286,9 +282,16 @@ fill="#ffffff" stroke="none">
                                             </tr>
                                         </table> 
                                         <div class="show-more">Показать ещё</div> 
-                                    </div>    
-                                    <div class="table_bubble_item">
-                                        <p>Задние тормозные колодки</p>                                   
+                                    </div>                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table_bubble cb__bubble">
+                            <div class="cb__bubble_content">
+                                <div class="table_bubble_title">Задние тормозные колодки</div>
+                                <span class="table_bubble_close open search_close"><b class="tb-show">Развернуть</b><b class="tb-hide">Свернуть</b></span>
+                                <div class="table_bubble_table open search_results">                                      
+                                    <div class="table_bubble_item">              
                                         <table>
                                             <tr>
                                                 <th>Бренд</th>
@@ -384,8 +387,8 @@ fill="#ffffff" stroke="none">
             </div>
             </div>
          </div>
-    </div>
-
+        </div>
+        <div class="footer"><div class="wrapper"></div></div>
 </body>
 </html>
 
