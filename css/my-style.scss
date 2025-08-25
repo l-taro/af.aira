@@ -1003,6 +1003,10 @@ table {
         }
     }
 }
+.aira_types {
+    margin-top: 20px;
+    margin-left: 3%;
+}
 @media screen and  (min-width: 1px) and (max-width: 1200px) {
     .cb__header .cb__center, 
     .cb__form  .cb__center,
@@ -1103,6 +1107,7 @@ table {
             margin-left: 10%;
         }
     }
+  
     .cb__bubble.table_bubble {
         border-radius: 0;
         overflow-x: auto;
@@ -1181,6 +1186,10 @@ table {
     .cb__mobile-item {
         display: block;
         white-space: nowrap;
+    }
+    .aira_types {
+        font-size: 14px;
+        margin-bottom: 20px;
     }
     
 }

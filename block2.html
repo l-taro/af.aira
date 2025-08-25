@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анимация плашек преимуществ YULSUN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .advantage-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.2);
+            background-color: #dc2626;
+            color: white;
+        }
+
+        .advantage-card .icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .advantage-card .icon.consultation {
+            background: linear-gradient(135deg, #ff9a56, #ffad7a);
+        }
+
+        .advantage-card .icon.delivery {
+            background: linear-gradient(135deg, #4fc3f7, #29b6f6);
+        }
+
+        .advantage-card .icon.search {
+            background: linear-gradient(135deg, #ab47bc, #9c27b0);
+        }
+
+        .advantage-card .icon.payment {
+            background: linear-gradient(135deg, #66bb6a, #4caf50);
+        }
+
+        .advantage-card .icon.order {
+            background: linear-gradient(135deg, #42a5f5, #1e88e5);
+        }
+
+        .advantage-card .icon.stock {
+            background: linear-gradient(135deg, #ef5350, #f44336);
+        }
+
+        .advantage-card .icon::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+        }
+
+        .advantage-card .icon svg {
+            transition: all 0.3s ease;
+        }
+
+        .advantage-card:hover .icon {
+            background: white !important;
+            transform: rotate(10deg) scale(1.1);
+            box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
+        }
+
+        .advantage-card:hover .icon svg path {
+            fill: #dc2626;
+        }
+
+        .card-content {
+            flex: 1;
+        }
+
+        .advantage-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .advantage-card:hover h3 {
+            color: white;
+        }
+
+        .advantage-card p {
+            color: #666;
+            line-height: 1.5;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .advantage-card:hover p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .advantage-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .advantage-card:hover::before {
+            left: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .advantages-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .advantage-card {
+                padding: 15px;
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .card-content {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section-title">
+            <h2>Почему выбирают YULSUN</h2>
+            <p>Подбираем, подвозим, подсказываем. Никаких догадок. Только точные автозапчасти для иномарок — с первого раза, по VIN-коду.</p>
+        </div>
+        
+        <div class="advantages-grid">
+            <div class="advantage-card">
+                <div class="icon consultation">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C13.1046 2 14 2.89543 14 4C14 4.53043 13.7893 5.03914 13.4142 5.41421C13.0391 5.78929 12.5304 6 12 6C11.4696 6 10.9609 5.78929 10.5858 5.41421C10.2107 5.03914 10 4.53043 10 4C10 2.89543 10.8954 2 12 2ZM21 9V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V9C3 7.89543 3.89543 7 5 7H8C8 8.65685 9.34315 10 11 10H13C14.6569 10 16 8.65685 16 7H19C20.1046 7 21 7.89543 21 9ZM12 12C10.8954 12 10 12.8954 10 14C10 15.1046 10.8954 16 12 16C13.1046 16 14 15.1046 14 14C14 12.8954 13.1046 12 12 12Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <h3>Объясним без техно-словаря</h3>
+                    <p>Доступными словами расскажем о любой детали, чтобы вы точно понимали, что покупаете</p>
+                </div>
+            </div>
+            
+            <div class="advantage-card">
+                <div class="icon payment">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 7C2 5.89543 2.89543 5 4 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H4C2.89543 19 2 18.1046 2 17V7ZM4 9V17H20V9H4ZM6 11H10V13H6V11ZM14 15H18V13H14V15Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <h3>Онлайн-оплата и заказ</h3>
+                    <p>Возможна оплата через 6 месяцев с помощью удобных сервисов рассрочки</p>
+                </div>
+            </div>
+            
+            <div class="advantage-card">
+                <div class="icon search">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.031 16.617L22.314 20.899L20.899 22.314L16.617 18.031C15.0237 19.3082 13.042 20.0029 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20.0029 13.042 19.3082 15.0237 18.031 16.617ZM16.025 15.875C17.2941 14.5699 18.0029 12.8204 18 11C18 7.132 14.867 4 11 4C7.132 4 4 7.132 4 11C4 14.867 7.132 18 11 18C12.8204 18.0029 14.5699 17.2941 15.875 16.025L16.025 15.875Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <h3>Подберем по VIN за час</h3>
+                    <p>Любой сложности детали найдем быстро и точно по VIN-коду вашего автомобиля</p>
+                </div>
+            </div>
+            
+            <div class="advantage-card">
+                <div class="icon delivery">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 8H20L23 12.056V18H20.965C20.7072 19.1947 19.6329 20.0829 18.3454 20.0829C17.0578 20.0829 15.9835 19.1947 15.7257 18H8.27424C8.01646 19.1947 6.94218 20.0829 5.65462 20.0829C4.36707 20.0829 3.29279 19.1947 3.03501 18H1V6C1 5.44772 1.44772 5 2 5H16C16.5523 5 17 5.44772 17 6V8ZM17 10V13H21V12.715L18.992 10H17Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <h3>Быстрая доставка</h3>
+                    <p>Доставим в любую точку России в кратчайшие сроки с гарантией сохранности</p>
+                </div>
+            </div>
+            
+            <div class="advantage-card">
+                <div class="icon order">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 4V2C7 1.44772 7.44772 1 8 1H16C16.5523 1 17 1.44772 17 2V4H20C20.5523 4 21 4.44772 21 5C21 5.55228 20.5523 6 20 6H19V19C19 20.1046 18.1046 21 17 21H7C5.89543 21 5 20.1046 5 19V6H4C3.44772 6 3 5.55228 3 5C3 4.44772 3.44772 4 4 4H7ZM9 3V4H15V3H9ZM7 6V19H17V6H7ZM9 8H11V17H9V8ZM13 8H15V17H13V8Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <h3>Заказ можно оформить</h3>
+                    <p>Дистанционно или в магазине - как вам удобнее, всегда готовы помочь</p>
+                </div>
+            </div>
+            
+            <div class="advantage-card">
+                <div class="icon stock">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 5H20V3H4V5ZM20 9H4V7H20V9ZM3 11H10V20C10 20.5523 10.4477 21 11 21H13C13.5523 21 14 20.5523 14 20V11H21L20 23H4L3 11ZM16 11H21V20C21 20.5523 20.5523 21 20 21H19V11H16Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <h3>Расходники и автохимия</h3>
+                    <p>Всегда в наличии качественные расходные материалы и автохимия</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

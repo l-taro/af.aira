@@ -64,9 +64,7 @@ body {
   display: none;
 }
 
-.cb {
-  /* form */
-}
+
 .cb__wrapper {
   background: #9fa3a6 url("/images/chat-bg_001.webp") left center no-repeat;
 }
@@ -916,6 +914,11 @@ table {
   background: #ab150e;
 }
 
+.aira_types {
+  margin-top: 20px;
+  margin-left: 3%;
+}
+
 @media screen and (min-width: 1px) and (max-width: 1200px) {
   .cb__header .cb__center,
 .cb__form .cb__center,
@@ -1090,6 +1093,10 @@ table {
   .cb__mobile-item {
     display: block;
     white-space: nowrap;
+  }
+  .aira_types {
+    font-size: 14px;
+    margin-bottom: 20px;
   }
 }
 /* ======================================================= *//*# sourceMappingURL=my-style.css.map */
